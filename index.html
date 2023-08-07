@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Test Demo</title>
+  </head>
+  <script>
+    const getItem = (value) => {
+      document.getElementById("item_price").innerHTML = value + ".00";
+      if (value == 195) {
+        document.getElementById("first_pair").style.display = "block";
+        document.getElementById("first_rectangle").style.backgroundColor =
+          "rgba(244, 251, 249, 1)";
+        document.getElementById("first_rectangle").style.border =
+          "1px solid rgba(0, 127, 97, 1)";
+        document.getElementById("second_pair").style.display = "none";
+        document.getElementById("second_rectangle").style.backgroundColor =
+          "#ffffff";
+        document.getElementById("second_rectangle").style.border =
+          "1px solid rgba(200, 200, 200, 1)";
+        document.getElementById("third_pair").style.display = "none";
+        document.getElementById("third_rectangle").style.backgroundColor =
+          "#ffffff";
+        document.getElementById("third_rectangle").style.border =
+          " 1px solid rgba(200, 200, 200, 1)";
+      } else if (value == 345) {
+        document.getElementById("first_pair").style.display = "none";
+        document.getElementById("first_rectangle").style.backgroundColor =
+          "#ffffff";
+        document.getElementById("first_rectangle").style.border =
+          "1px solid rgba(200, 200, 200, 1)";
+        document.getElementById("second_pair").style.display = "block";
+
+        document.getElementById("second_rectangle").style.border =
+          "   1px solid rgba(0, 127, 97, 1)";
+        document.getElementById("second_rectangle").style.backgroundColor =
+          "rgba(244, 251, 249, 1)";
+
+        document.getElementById("third_pair").style.display = "none";
+        document.getElementById("third_rectangle").style.border =
+          "1px solid rgba(200,200,200,1)";
+        document.getElementById("third_rectangle").style.display = "#ffffff";
+      } else {
+        document.getElementById("first_pair").style.display = "none";
+        document.getElementById("first_rectangle").style.border =
+          "1px solid rgba(200,200,200,1)";
+        document.getElementById("first_rectangle").style.backgroundColor =
+          "#ffffff";
+        document.getElementById("second_pair").style.display = "none";
+        document.getElementById("second_rectangle").style.border =
+          "1px solid rgba(200,200,200,1)";
+        document.getElementById("second_rectangle").style.backgroundColor =
+          "#ffffff";
+        document.getElementById("third_pair").style.display = "block";
+
+        document.getElementById("third_rectangle").style.backgroundColor =
+          "rgba(244, 251, 249, 1)";
+        document.getElementById("third_rectangle").style.border =
+          "1px solid rgba(0, 127, 97, 1)";
+      }
+    };
+  </script>
+  <script></script>
+  <body>
+    <div class="wrapper">
+      <div class="header_text">
+        <div class="bordered"></div>
+        <h3>Bundle & Save</h3>
+        <div class="bordered"></div>
+      </div>
+      <div
+        class="rectangle_wrapper_border"
+        id="first_rectangle"
+        style="
+          background-color: rgba(244, 251, 249, 1);
+          border: 1px solid rgba(0, 127, 97, 1);
+        "
+      >
+        <div class="rectanglur_area">
+          <div class="flex">
+            <input
+              type="radio"
+              id="195"
+              value="195"
+              name="price"
+              onclick="getItem(195)"
+              checked
+            />
+            <label class="ms-1" for="195">
+              <p>1 Pair</p>
+              <h5>DKK 195.00</h5>
+            </label>
+          </div>
+          <div>
+            <p>50% off</p>
+          </div>
+        </div>
+        <div id="first_pair" style="display: block" class="dynamic_wrapper">
+          <div class="wrapper_selection" id="table_data">
+            <table>
+              <thead>
+                <tr style="margin-bottom: 4px">
+                  <td></td>
+                  <td>Size</td>
+                  <td>Color</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <select class="select_bar">
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="select_bar">
+                      <option selected hidden>Colour</option>
+                      <option>Black</option>
+                      <option>Red</option>
+                      <option>Green</option>
+                      <option>Blue</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle_wrapper_border" id="second_rectangle">
+        <div class="rectanglur_area">
+          <div class="flex">
+            <div>
+              <input
+                type="radio"
+                id="345"
+                value="345"
+                name="price"
+                onclick="getItem(345)"
+              />
+            </div>
+            <label class="ms-1" for="345">
+              <p>2 Pair</p>
+              <h5>DKK 345.00</h5>
+            </label>
+          </div>
+          <strike>DKK 195.00</strike>
+          <div>
+            <h5 class="text-green">Most Popular</h5>
+            <p>40% off</p>
+          </div>
+        </div>
+        <div id="second_pair" style="display: none" class="dynamic_wrapper">
+          <div class="wrapper_selection" id="table_data">
+            <table>
+              <thead>
+                <tr style="margin-bottom: 4px">
+                  <td></td>
+                  <td>Size</td>
+                  <td>Color</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <select class="select_bar">
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="select_bar">
+                      <option selected hidden>Colour</option>
+                      <option>Black</option>
+                      <option>Red</option>
+                      <option>Green</option>
+                      <option>Blue</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#2</td>
+                  <td>
+                    <select class="select_bar">
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="select_bar">
+                      <option selected hidden>Colour</option>
+                      <option>Black</option>
+                      <option>Red</option>
+                      <option>Green</option>
+                      <option>Blue</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle_wrapper_border" id="third_rectangle">
+        <div class="rectanglur_area">
+          <div class="flex">
+            <div>
+              <input
+                type="radio"
+                id="528"
+                name="price"
+                onclick="getItem(528)"
+              />
+            </div>
+            <label class="ms-1" for="528">
+              <p>3 Pair</p>
+              <h5>DKK 528.00</h5>
+            </label>
+          </div>
+
+          <div>
+            <h5>60% off</h5>
+          </div>
+        </div>
+        <div id="third_pair" style="display: none" class="dynamic_wrapper">
+          <div class="wrapper_selection" id="table_data">
+            <table>
+              <thead>
+                <tr style="margin-bottom: 4px">
+                  <td></td>
+                  <td>Size</td>
+                  <td>Color</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1</td>
+                  <td>
+                    <select class="select_bar">
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="select_bar">
+                      <option selected hidden>Colour</option>
+                      <option>Black</option>
+                      <option>Red</option>
+                      <option>Green</option>
+                      <option>Blue</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#2</td>
+                  <td>
+                    <select class="select_bar">
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="select_bar">
+                      <option selected hidden>Colour</option>
+                      <option>Black</option>
+                      <option>Red</option>
+                      <option>Green</option>
+                      <option>Blue</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#3</td>
+                  <td>
+                    <select class="select_bar">
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                      <option>XL</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="select_bar">
+                      <option selected hidden>Color</option>
+                      <option>Black</option>
+                      <option>Red</option>
+                      <option>Green</option>
+                      <option>Blue</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex"
+        style="justify-content: space-between; margin-top: 15px"
+      >
+        <div>
+          <p class="text-green">Free 2 Day Shipping</p>
+        </div>
+        <div>
+          <p>Total : DKK <span id="item_price">195.00</span></p>
+        </div>
+      </div>
+      <div style="margin-top: 15px">
+        <button class="cart_btn">+ Add to Cart</button>
+      </div>
+      <div class="text-end">
+        <small> &#169; Powered by Pumper</small>
+      </div>
+    </div>
+  </body>
+</html>
